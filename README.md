@@ -19,14 +19,8 @@
 </p>
 
 ## 📌 Overview
-**LUNA** is a geometry-aware panoptic lifting framework for robust 3D scene perception under
-low-light, noisy, and motion-blurred imaging conditions. It extends
-[Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) with geometry-aware depth
-supervision and [Fast Adaptive Multitask Optimization (FAMO)](https://github.com/Cranial-XIX/FAMO)
-to keep 3D reconstruction and panoptic segmentation stable when RGB cues alone become unreliable.
-On a systematically degraded version of the Replica dataset (noise + motion blur, three severity
-levels each), LUNA consistently outperforms Panoptic Lifting and restoration-augmented baselines
-in both reconstruction quality (PSNR/SSIM) and panoptic accuracy (mIoU/PQ/SQ/RQ).
+**LUNA** is a geometry-aware panoptic lifting framework for robust 3D scene perception under low-light, noisy, and motion-blurred imaging conditions. It extends [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) with geometry-aware depth
+supervision and [Fast Adaptive Multitask Optimization (FAMO)](https://github.com/Cranial-XIX/FAMO) to keep 3D reconstruction and panoptic segmentation stable when RGB cues alone become unreliable. On a systematically degraded version of the Replica dataset (noise + motion blur, three severity levels each), LUNA consistently outperforms Panoptic Lifting and restoration-augmented baselines in both reconstruction quality (PSNR/SSIM) and panoptic accuracy (mIoU/PQ/SQ/RQ).
 
 ## ⚙️ Environment Setup
 
@@ -44,11 +38,7 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-<your-torch-version>
 ```
 
 ### 3. Prepare data
-LUNA trains on [Replica](https://github.com/facebookresearch/Replica-Dataset) scenes processed the
-same way as Panoptic Lifting: `src/dataset/preprocessing/preprocess_replica.py` generates
-Mask2Former semantic/instance pseudo-labels and depth. Preprocessing for ScanNet and Hypersim is
-also included for reference. Point `dataset_root` at the resulting scene folder (via
-`config/panopli.yaml` or a Hydra CLI override).
+LUNA trains on [Replica](https://github.com/facebookresearch/Replica-Dataset) scenes processed the same way as Panoptic Lifting: `src/dataset/preprocessing/preprocess_replica.py` generates Mask2Former semantic/instance pseudo-labels and depth.
 
 ### 4. Generate the degraded evaluation variants
 ```bash
@@ -69,8 +59,7 @@ python trainer/train_panopli_tensorf.py \
   experiment=smoke_test dataset_root=<path-to-a-prepared-scene> \
   max_epochs=1 trainer.devices=1 trainer.strategy=auto
 ```
-You should see `train/loss_rgb`, `train/loss_depth`, `train/loss_semantics`, and `famo/weight_*`
-logged within the first few steps.
+You should see `train/loss_rgb`, `train/loss_depth`, `train/loss_semantics`, and `famo/weight_*` logged within the first few steps.
 
 ## 🚀 Training
 ```bash
@@ -80,9 +69,6 @@ python trainer/train_panopli_tensorf.py \
   experiment=<run-name> dataset_root=<path-to-prepared-scene> \
   trainer.accelerator=gpu trainer.devices=4 trainer.strategy=ddp
 ```
-Loss weights, FAMO's `gamma`/`meta_lr`, and the TensoRF grid schedule live in
-`config/panopli.yaml` and can be overridden on the command line via Hydra. Checkpoints and logs are
-written to `runs/<timestamp>_PanopLi_<experiment>_<run-id>/`.
 
 ## 📊 Evaluation
 ```bash
@@ -109,15 +95,10 @@ luna/
 ```
 
 ## 🙏 Acknowledgements
-LUNA builds on [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) (Siddiqui et al.,
-CVPR 2023) and integrates [FAMO](https://github.com/Cranial-XIX/FAMO) (Liu et al., NeurIPS 2023).
-See `THIRD_PARTY_NOTICES.md` for license details.
+LUNA builds on [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) (Siddiqui et al., CVPR 2023) and integrates [FAMO](https://github.com/Cranial-XIX/FAMO) (Liu et al., NeurIPS 2023).
 
 ## 📖 Citation
-
-If you found this code/work to be useful in your own research, please consider citing the
-following:
-
+If you found this code/work to be useful in your own research, please consider citing the following:
 ```bibtex
 @inproceedings{ravendran2026luna,
   title={LUNA: Low-Light Robust Panoptic Lifting for Adverse Robotic 3D Scene Perception},
