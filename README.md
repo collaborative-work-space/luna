@@ -94,7 +94,7 @@ luna/
 └── README.md             # This file
 ```
 
-## 🙏 Acknowledgements
+## 🫡 Acknowledgements
 LUNA builds on [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) (Siddiqui et al., CVPR 2023) and integrates [FAMO](https://github.com/Cranial-XIX/FAMO) (Liu et al., NeurIPS 2023).
 
 ## 📖 Citation
