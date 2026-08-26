@@ -1,15 +1,17 @@
 <h1 align="center">LUNA: Low-Light Robust Panoptic Lifting for Adverse Robotic 3D Scene Perception</h1>
 
 <p align="center">
-  Ahalya Ravendran, Xun Li, Leo Lebrat*, Rodrigo Santa Cruz*, Hu Zhang, Lars Petersson, Dadong Wang
+  <a href="https://people.csiro.au/r/a/ahalya-ravendran">Ahalya Ravendran</a>, 
+  <a href="https://people.csiro.au/L/X/Xun-Li">Xun Li</a>
+  <a href="https://www.qut.edu.au/about/our-people/academic-profiles/leo.lebrat">Leo Lebrat</a>, 
+  <a href="https://www.qut.edu.au/about/our-people/academic-profiles/rodrigo.santacruz">Rodrigo Santa Cruz</a>, 
+  <a href="https://people.csiro.au/z/h/hu1-zhang">Hu Zhang</a>, 
+  <a href="https://people.csiro.au/P/L/Lars-Petersson">Lars Petersson</a>, 
+  <a href="https://people.csiro.au/W/D/Dadong-Wang">Dadong Wang</a>, 
 </p>
 
 <p align="center">
   CSIRO and Queensland University of Technology*, Australia
-</p>
-
-<p align="center">
-  IEEE World Congress on Computational Intelligence (WCCI) 2026
 </p>
 
 <p align="center">
