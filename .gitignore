@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+runs/
+wandb/
+data/
+*.ckpt
+.DS_Store

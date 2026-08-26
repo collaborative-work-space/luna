@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>LUNA: Low-Light Robust Panoptic Lifting for Adverse Robotic 3D Scene Perception</h1>
+    <p class="authors">
+      <a href="#">Ahalya Ravendran</a>,
+      <a href="#">Xun Li</a>,
+      <a href="#">Leo Lebrat</a><sup>*</sup>,
+      <a href="#">Rodrigo Santa Cruz</a><sup>*</sup>,
+      <a href="#">Hu Zhang</a>,
+      <a href="#">Lars Petersson</a>,
+      <a href="#">Dadong Wang</a>
+    </p>
+    <p class="affiliation">CSIRO and Queensland University of Technology<sup>*</sup>, Australia</p>
+    <div class="buttons">
+      <!-- Add the IEEE Xplore / arXiv link here once available -->
+      <a href="#" class="btn" target="_blank">📄 Paper</a>
+      <a href="https://github.com/collaborative-work-space/luna/" class="btn" target="_blank">💻 Code</a>
+    </div>
+  </header>
+
+  <!-- Abstract -->
+  <section id="abstract">
+    <h2 class="section-title">Abstract</h2>
+    <p class="abstract-text">
+      Robotic perception in low-light environments remains a major challenge due to severe noise and motion blur that degrade RGB imagery and hinder reliable scene understanding. While recent advances in 3D panoptic reconstruction have unified semantic and instance segmentation, these methods implicitly assume high-quality inputs — an assumption that breaks down in real-world conditions. We present LUNA, a geometry-aware panoptic lifting framework designed for robust 3D scene perception under adverse visual conditions. LUNA augments the original panoptic lifting formulation with depth-guided consistency and fast adaptive multitask optimization, enabling stable reconstruction and segmentation even when visual signals deteriorate. Across multiple degradation levels, LUNA consistently outperforms restoration-enhanced baselines in both panoptic accuracy and volumetric reconstruction quality.
+    </p>
+  </section>
+
+  <!-- Method -->
+  <section id="method">
+    <h2 class="section-title">Method</h2>
+    <div class="method-block">
+      <!-- Add images/pipeline.png (paper Fig. 2) and uncomment below -->
+      <!-- <img src="images/pipeline.png" alt="LUNA Pipeline Figure" class="pipeline-img"> -->
+      <div class="img-placeholder" style="max-width:80%;">Add pipeline figure here (paper Fig. 2)</div>
+      <p class="method-text">
+        LUNA extends <a href="https://github.com/nihalsid/panoptic-lifting" target="_blank">Panoptic Lifting</a>
+        (TensoRF + Mask2Former panoptic radiance fields) with two complementary components: (1)
+        <b>geometry-aware depth supervision</b>, combining an absolute depth error term and a gradient
+        smoothness term to enforce spatial consistency and semantic fidelity when RGB cues alone
+        become unreliable; and (2) <b>Fast Adaptive Multitask Optimization
+        (<a href="https://github.com/Cranial-XIX/FAMO" target="_blank">FAMO</a>)</b>, which learns
+        per-task weights across the photometric, geometric, semantic, instance, and segment-consistency
+        objectives during training — removing the need for manually tuned loss weights.
+      </p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results">
+    <h2 class="section-title">Results</h2>
+    <p class="method-text">
+      LUNA is evaluated on a systematically degraded version of the Replica dataset (six indoor
+      scenes, three levels each of Gaussian noise and motion blur) and consistently outperforms
+      Panoptic Lifting and restoration-augmented baselines. Strong-degradation results, averaged
+      across scenes:
+    </p>
+    <div class="results-table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr><th>Degradation</th><th>Method</th><th>PSNR&uarr;</th><th>SSIM&uarr;</th><th>mIoU&uarr;</th><th>PQ&uarr;</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="2">Noise&nbsp;(Strong)</td><td>Panoptic Lifting</td><td>14.72</td><td>0.49</td><td>0.083</td><td>0.038</td></tr>
+          <tr><td><b>LUNA (Ours)</b></td><td><b>16.13</b></td><td><b>0.65</b></td><td>0.046</td><td><b>0.076</b></td></tr>
+          <tr><td rowspan="2">Blur&nbsp;(Strong)</td><td>Panoptic Lifting</td><td>27.59</td><td>0.87</td><td>0.251</td><td>0.182</td></tr>
+          <tr><td><b>LUNA (Ours)</b></td><td><b>30.13</b></td><td><b>0.90</b></td><td><b>0.289</b></td><td><b>0.316</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="experiment-block">
+      <h3 class="exp-title">Qualitative comparison under strong Gaussian noise</h3>
+      <p class="query-caption">Rendered RGB / semantics / instances / depth</p>
+      <div class="compare-container">
+        <!-- Replace each placeholder with a crop from paper Fig. 4 and add the image tag, e.g.
+             <img src="images/noise-gt.png" alt="Ground truth"> -->
+        <figure><div class="img-placeholder">Ground truth</div></figure>
+        <figure><div class="img-placeholder">Panoptic Lifting</div></figure>
+        <figure><div class="img-placeholder">LUNA (Ours)</div></figure>
+      </div>
+    </div>
+
+    <div class="experiment-block">
+      <h3 class="exp-title">Qualitative comparison under strong motion blur</h3>
+      <p class="query-caption">Rendered RGB / semantics / instances / depth</p>
+      <div class="compare-container">
+        <!-- Replace each placeholder with a crop from paper Fig. 5 and add the image tag -->
+        <figure><div class="img-placeholder">Ground truth</div></figure>
+        <figure><div class="img-placeholder">Panoptic Lifting</div></figure>
+        <figure><div class="img-placeholder">LUNA (Ours)</div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section id="bibtex">
+    <h2 class="section-title">BibTeX</h2>
+    <pre class="bibtex-block">
+@inproceedings{ravendran2026luna,
+  title={LUNA: Low-Light Robust Panoptic Lifting for Adverse Robotic 3D Scene Perception},
+  author={Ravendran, Ahalya and Li, Xun and Lebrat, Leo and Santa Cruz, Rodrigo and Zhang, Hu and Petersson, Lars and Wang, Dadong},
+  booktitle={IEEE World Congress on Computational Intelligence (WCCI)},
+  year={2026}
+}
+    </pre>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
