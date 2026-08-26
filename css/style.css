@@ -14,18 +14,18 @@ h1 {
   font-size: 2em;
   margin-bottom: 10px;
   text-align: center;
-  color: #005fa3
+  color: #1a7a4d
 }
 
 .authors, .affiliation {
   font-size: 1em;
-  color: #005fa3;
+  color: #1a7a4d;
   text-align: center;
 }
 
 .authors a {
   text-decoration: none;
-  color: #005fa3;
+  color: #1a7a4d;
 }
 
 .buttons {
@@ -70,7 +70,7 @@ figcaption {
 h2 {
   font-size: 1.5em;
   margin-top: 30px;
-  color: #005fa3;
+  color: #1a7a4d;
   text-align: center; /* section headings centered */
 }
 
@@ -112,7 +112,7 @@ h2 {
 .section-title {
   font-size: 2em;
   margin: 40px 0 20px 0;
-  color: #005fa3; /* greenish-blue */
+  color: #1a7a4d; /* green */
   text-align: center;
 }
 
@@ -172,14 +172,14 @@ h2 {
   font-size: 16px;
   font-weight: 600;
   color: white;
-  background-color: #0078d7; /* blue */
+  background-color: #2e9e5b; /* green */
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005fa3; /* darker blue on hover */
+  background-color: #1a7a4d; /* darker green on hover */
 }
 
 .results-table-wrap {
@@ -201,7 +201,7 @@ h2 {
 }
 
 .results-table th {
-  background-color: #005fa3;
+  background-color: #1a7a4d;
   color: white;
 }
 
@@ -237,10 +237,10 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background: #f0f4f8;
-  border: 2px dashed #b7c9da;
+  background: #f0f7f2;
+  border: 2px dashed #a9d1b7;
   border-radius: 6px;
-  color: #6b8199;
+  color: #4c8567;
   font-size: 0.85em;
   padding: 10px;
   box-sizing: border-box;
