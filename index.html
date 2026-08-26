@@ -55,49 +55,13 @@
   <!-- Results -->
   <section id="results">
     <h2 class="section-title">Results</h2>
+    <div class="method-block">
+      <img src="images/results.png" alt="Results Figure" class="result-img">
+      <img src="images/qunat.png" alt="Table Figure" class="table-img">
     <p class="method-text">
-      LUNA is evaluated on a systematically degraded version of the Replica dataset (six indoor
-      scenes, three levels each of Gaussian noise and motion blur) and consistently outperforms
-      Panoptic Lifting and restoration-augmented baselines. Strong-degradation results, averaged
-      across scenes:
+      LUNA is evaluated on a systematically degraded version of the Replica dataset (six indoor scenes, three levels each of Gaussian noise and motion blur) and consistently outperforms Panoptic Lifting and restoration-augmented baselines. Strong-degradation results, averaged across scenes:
     </p>
-    <div class="results-table-wrap">
-      <table class="results-table">
-        <thead>
-          <tr><th>Degradation</th><th>Method</th><th>PSNR&uarr;</th><th>SSIM&uarr;</th><th>mIoU&uarr;</th><th>PQ&uarr;</th></tr>
-        </thead>
-        <tbody>
-          <tr><td rowspan="2">Noise&nbsp;(Strong)</td><td>Panoptic Lifting</td><td>14.72</td><td>0.49</td><td>0.083</td><td>0.038</td></tr>
-          <tr><td><b>LUNA (Ours)</b></td><td><b>16.13</b></td><td><b>0.65</b></td><td>0.046</td><td><b>0.076</b></td></tr>
-          <tr><td rowspan="2">Blur&nbsp;(Strong)</td><td>Panoptic Lifting</td><td>27.59</td><td>0.87</td><td>0.251</td><td>0.182</td></tr>
-          <tr><td><b>LUNA (Ours)</b></td><td><b>30.13</b></td><td><b>0.90</b></td><td><b>0.289</b></td><td><b>0.316</b></td></tr>
-        </tbody>
-      </table>
     </div>
-
-    <div class="experiment-block">
-      <h3 class="exp-title">Qualitative comparison under strong Gaussian noise</h3>
-      <p class="query-caption">Rendered RGB / semantics / instances / depth</p>
-      <div class="compare-container">
-        <!-- Replace each placeholder with a crop from paper Fig. 4 and add the image tag, e.g.
-             <img src="images/noise-gt.png" alt="Ground truth"> -->
-        <figure><div class="img-placeholder">Ground truth</div></figure>
-        <figure><div class="img-placeholder">Panoptic Lifting</div></figure>
-        <figure><div class="img-placeholder">LUNA (Ours)</div></figure>
-      </div>
-    </div>
-
-    <div class="experiment-block">
-      <h3 class="exp-title">Qualitative comparison under strong motion blur</h3>
-      <p class="query-caption">Rendered RGB / semantics / instances / depth</p>
-      <div class="compare-container">
-        <!-- Replace each placeholder with a crop from paper Fig. 5 and add the image tag -->
-        <figure><div class="img-placeholder">Ground truth</div></figure>
-        <figure><div class="img-placeholder">Panoptic Lifting</div></figure>
-        <figure><div class="img-placeholder">LUNA (Ours)</div></figure>
-      </div>
-    </div>
-  </section>
 
   <!-- BibTeX -->
   <section id="bibtex">
