@@ -18,10 +18,6 @@
   <a href="https://collaborative-work-space.github.io/luna/">Project Page</a>
 </p>
 
-<p align="center">
-  <img src="images/result.png" alt="Luna Teaser" width="70%">
-</p>
-
 
 ## 📌 Overview
 **LUNA** is a geometry-aware panoptic lifting framework for robust 3D scene perception under low-light, noisy, and motion-blurred imaging conditions. It extends [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) with geometry-aware depth
