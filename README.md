@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="images/problem.png" alt="Luna Teaser" width="70%">
+  <img src="images/result.png" alt="Luna Teaser" width="70%">
 </p>
 
 
