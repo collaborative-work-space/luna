@@ -18,6 +18,11 @@
   <a href="https://collaborative-work-space.github.io/luna/">Project Page</a>
 </p>
 
+<p align="center">
+  <img src="images/abstract.png" alt="Luna Teaser" width="70%">
+</p>
+
+
 ## 📌 Overview
 **LUNA** is a geometry-aware panoptic lifting framework for robust 3D scene perception under low-light, noisy, and motion-blurred imaging conditions. It extends [Panoptic Lifting](https://github.com/nihalsid/panoptic-lifting) with geometry-aware depth
 supervision and [Fast Adaptive Multitask Optimization (FAMO)](https://github.com/Cranial-XIX/FAMO) to keep 3D reconstruction and panoptic segmentation stable when RGB cues alone become unreliable. On a systematically degraded version of the Replica dataset (noise + motion blur, three severity levels each), LUNA consistently outperforms Panoptic Lifting and restoration-augmented baselines in both reconstruction quality (PSNR/SSIM) and panoptic accuracy (mIoU/PQ/SQ/RQ).
